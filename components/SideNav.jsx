@@ -3,12 +3,13 @@ import { UserButton } from '@clerk/nextjs'
 import { LayoutGrid, PiggyBank, ReceiptText, ShieldCheck } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname , useRouter } from 'next/navigation'
 import path from 'path'
 import React, { useEffect } from 'react'
 
 function SideNav() {
     const path=usePathname();
+    const router=useRouter()
     useEffect(()=>{
         console.log(path)
     }, [path])
@@ -40,7 +41,7 @@ function SideNav() {
     ]
   return (
     <div className='h-screen fixed p-5 border shadow-sm'>
-      <Image src={'/logo.svg'} alt='Logo' width={160} height={100} />
+      <Image src={'/logo.svg'} className='cursor-pointer' onClick={()=>router.push("/")} alt='Logo' width={160} height={100} />
       <div className='mt-5'>
         {menuList.map((menu,index) => (
           <Link  href={menu.path} key={index}>

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Header></Header>
-      <Hero></Hero>
+      <Hero ></Hero>
       <Footer></Footer>
 
     </div>
