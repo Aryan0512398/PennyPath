@@ -9,7 +9,8 @@ function BudgetItem({ budget }) {
     return ans;
   };
   return (
-    <Link href={`/dashboard/expenses/${budget?.id}`} className="border h-[180px] p-5 rounded-lg hover:shadow-md transition-all duration-200 bg-white cursor-pointer">
+    <Link href={`/dashboard/expenses/${budget?.id}`} >
+      <div className="border h-[180px] p-5 rounded-lg hover:shadow-md transition-all duration-200 bg-white cursor-pointer">
       <div className="flex gap-2 items-center justify-between w-full">
         <div className="flex gap-2 items-center">
           <h2 className="text-3xl p-3 px-4 bg-slate-100 rounded-full">
@@ -31,6 +32,7 @@ function BudgetItem({ budget }) {
             <div className={` bg-indigo-700 h-2 rounded-full`}
             style={{ width: `${calculateProgreePercentage()}%` }}></div>
         </div>
+      </div>
       </div>
     </Link>
   );

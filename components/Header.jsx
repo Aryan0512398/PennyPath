@@ -13,12 +13,20 @@ const Header = () => {
       {isSignedIn ? (
         <UserButton />
       ) : (
-        <Link href="/sign-in">
-          <Button className="cursor-pointer border-indigo-600 bg-indigo-600 transition-colors hover:bg-indigo-700"
-              >
-            Get Started
-          </Button>{" "}
-        </Link>
+         <div className="flex gap-4">
+          <Link href="/dashboard">
+            <Button variant={"outline"} className="cursor-pointer">
+              Dashboard
+            </Button>
+          </Link>
+          <Link href="/sign-in">
+            <Button className="cursor-pointer border-indigo-600 bg-indigo-600 transition-colors hover:bg-indigo-700">
+              Get Started
+            </Button>
+          </Link>
+          
+        </div>
+        
       )}
     </div>
   );

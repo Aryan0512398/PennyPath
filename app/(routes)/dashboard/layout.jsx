@@ -3,11 +3,14 @@ import { UserButton, useUser } from "@clerk/nextjs";
 import React, { useEffect } from "react";
 import SideNav from "@/components/SideNav.jsx";
 import DashboardHeader from "@/components/DashboardHeader.jsx";
+import DashboardOverview from "@/components/DashboardOverview.jsx";
+import MobileMenuBar from "@/components/MobileMenuBar.jsx";
+import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
 import { db } from "../../../utils/dbConfig.jsx";
 import { Budgets } from "@/utils/schema.jsx";
 import { eq } from "drizzle-orm";
-const DashboardLayout = ({children}) => {
+const DashboardLayout = ({ children }) => {
   const { user } = useUser();
   const router = useRouter();
   useEffect(() => {
@@ -34,10 +37,16 @@ const DashboardLayout = ({children}) => {
       <div className="fixed md:w-64 hidden md:block">
         <SideNav></SideNav>
       </div>
-      <div className="md:ml-64 ">
-        <DashboardHeader></DashboardHeader>
+      <div className="md:ml-64 pb-16">
+        {" "}
+        {/* 👈 Add padding to avoid overlap with MobileMenuBar */}
+        <DashboardHeader />
+        <DashboardOverview />
         {children}
       </div>
+      <MobileMenuBar /> {/* ✅ Add MobileMenuBar here */}
+      <Footer></Footer>
+      
     </div>
   );
 };

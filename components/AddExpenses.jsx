@@ -32,7 +32,7 @@ function AddExpenses({budgetId,user,refreshData}) {
                 Expense Name
               </label>
               <Input
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)} value={name}
                 placeholder="eg. Table Decor"
               />
             </div>
@@ -42,7 +42,7 @@ function AddExpenses({budgetId,user,refreshData}) {
               </label>
               <Input
                 type="number"
-                onChange={(e) => setAmount(e.target.value)}
+                onChange={(e) => setAmount(e.target.value)} value={amount}
                 placeholder="eg. ₹2000 "
               />
             </div>

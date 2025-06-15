@@ -39,7 +39,7 @@ function SideNav() {
         }
     ]
   return (
-    <div className='h-screen p-5 border shadow-sm'>
+    <div className='h-screen fixed p-5 border shadow-sm'>
       <Image src={'/logo.svg'} alt='Logo' width={160} height={100} />
       <div className='mt-5'>
         {menuList.map((menu,index) => (
@@ -50,7 +50,7 @@ function SideNav() {
           </Link>
         ))}
       </div>
-      <div className='fixed bottom-10 p-5 flex gap-2 items-center '>
+      <div className='fixed bottom-15 p-5 flex gap-2 items-center '>
         <UserButton id="user-button" ></UserButton>
          <label htmlFor="user-button" className='cursor-pointer text-gray-600 font-semibold'>Profile</label>
       </div>
