@@ -26,7 +26,7 @@ function Hero() {
         </div>
       </div>
       <Image
-        className="-mt-7 rounded-xl border-2"
+        className=" rounded-xl border-2 items-center justify-center"
         src={"/Dashboard2.png"}
         alt="Dashboard"
         width={1000}

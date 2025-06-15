@@ -1,17 +1,16 @@
-
-import Header from "@/components/Header"
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <Header></Header>
-      <Hero ></Hero>
-      <Footer></Footer>
-
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+      </main>
+      <Footer />
     </div>
   );
 }
+
