@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-  <footer className="w-full relative bottom-12   md:bottom-0 bg-white border-t py-6 text-sm text-gray-500 ">
+  <footer className="w-full relative     md:bottom-0 bg-white border-t py-6 text-sm text-gray-500 ">
   <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center px-4 gap-2 text-center">
     <p>© {new Date().getFullYear()} PennyPath. All rights reserved.</p>
 
