@@ -30,8 +30,47 @@ PennyPath is a modern, intuitive expense tracker that helps you manage your mone
 
 ## 📦 Getting Started
 
-### 1. Clone the repo
-
 ```bash
 git clone https://github.com/Aryan0512398/PennyPath.git
 cd PennyPath
+npm install
+```
+
+Create a `.env.local` file in the root with the following:
+
+```env
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+
+# Clerk Routing
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/dashboard
+NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/sign-in
+
+# PostgreSQL DB
+NEXT_PUBLIC_DATABASE_URL=your_postgres_url
+```
+
+> ⚠️ Never commit your `.env.local` to Git.
+
+Then run the app locally:
+
+```bash
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to start tracking your expenses.
+
+PennyPath uses **Clerk** for secure authentication. Users can sign up, log in, and manage their personal expense data safely and privately.
+
+🚧 Planned Features:
+- Add recurring expense support  
+- Export budgets/expenses as CSV or PDF  
+- In-app notifications & reminders  
+- Enhanced mobile experience  
+- Analytics by category or time period  
+
+Deployed on **Vercel**: https://penny-path-flax.vercel.app
+
+Made with ❤️ by [Aryan0512398](https://github.com/Aryan0512398)
