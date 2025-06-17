@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🪙 PennyPath - Expense Tracker App
 
-## Getting Started
+**[Live Demo →](https://penny-path-flax.vercel.app/)**  
+**[GitHub Repo →](https://github.com/Aryan0512398/PennyPath)**
 
-First, run the development server:
+PennyPath is a modern, intuitive expense tracker that helps you manage your money smartly. From creating budgets to tracking expenses and visualizing your spending—PennyPath makes personal finance simple and efficient.
+
+## 🚀 Features
+
+- 💼 **Create & Manage Budgets** with names, limits, and custom icons
+- 💸 **Track Expenses** under each budget with rich UI
+- 📊 **Visual Dashboards** including progress rings and animated counters
+- 🧠 **AI Tip of the Day** for better money habits (custom feature)
+- 🔒 **Authentication** powered by [Clerk](https://clerk.com)
+- 🧩 **Component-based UI** using [ShadCN UI](https://ui.shadcn.com)
+- ⚙️ **Built with Next.js 15**, App Router & Server Components
+- 🛢️ **Database & ORM**: PostgreSQL + Drizzle ORM
+
+## 🛠️ Tech Stack
+
+| Tech            | Description                     |
+|-----------------|---------------------------------|
+| **Next.js 15**  | App Router, Server Components   |
+| **ShadCN/UI**   | Accessible, composable UI       |
+| **Tailwind CSS**| Utility-first styling           |
+| **Drizzle ORM** | Type-safe SQL ORM               |
+| **PostgreSQL**  | Relational database             |
+| **Clerk**       | Authentication & user sessions  |
+| **Vercel**      | Hosting and deployment          |
+
+## 📦 Getting Started
+
+### 1. Clone the repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/Aryan0512398/PennyPath.git
+cd PennyPath
